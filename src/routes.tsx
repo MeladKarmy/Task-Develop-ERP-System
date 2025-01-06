@@ -1,7 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
-import Error from "@/pages/Error/Error";
 import Error404 from "@/pages/404/Error404";
+import Error from "@/pages/Error/Error";
+import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
+import Dashboard from "./pages/Dashboard";
+import EmployeeDetails from "./pages/Employees/EmployeeDetails";
+import Employees from "./pages/Employees/Employees";
+import Teams from "./pages/Teams";
 
 export const router = createBrowserRouter([
   {
@@ -9,8 +13,24 @@ export const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/",
-        element: <h1>srwer</h1>,
+        index: true,
+        element: <Employees />,
+      },
+      {
+        path: "employees",
+        element: <Employees />,
+      },
+      {
+        path: "/employees/:id",
+        element: <EmployeeDetails />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/teams",
+        element: <Teams />,
       },
     ],
   },

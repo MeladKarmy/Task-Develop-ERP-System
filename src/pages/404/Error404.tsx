@@ -1,8 +1,8 @@
 const Error404 = () => {
   return (
     <section>
-      <div className="container mx-auto flex place-content-center">
-        {/* <img src="/svg/404.svg" /> */}not found
+      <div className="container mx-auto flex items-center justify-center h-screen w-screen">
+        <h2 className="font-bold text-2xl text-primary">Not found</h2>
       </div>
     </section>
   );
